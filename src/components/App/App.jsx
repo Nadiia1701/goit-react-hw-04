@@ -64,7 +64,7 @@ const closeImageModal = () => {
       <SearchBar onSearch={handleSearch} />
       {error && <ErrorMessage />}
       {isLoading && <Loader />}
-      {photos.length > 0 && <ImageGallery items={photos} onImageClick={(smallUrl, largeUrl) => openImageModal(smallUrl, largeUrl)} />}
+      {photos.length > 0 && <ImageGallery items={photos} onImageClick={(item) => openImageModal(item.urls.small, item.urls.regular)} />}
       {photos.length > 0 && !isLoading && <LoadMoreBtn onClick={handleLoadMore} />}
       {selectedImage && <ImageModal isOpen={true} onRequestClose={closeImageModal} imageUrl={selectedImage} imageUrlLarge={selectedImageLarge} />}
     </div>

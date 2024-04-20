@@ -19,14 +19,9 @@ const customStyles = {
 Modal.setAppElement("#root");
 
 export default function ImageModal({ isOpen, onRequestClose, imageUrlLarge }) {
-return (
-  <Modal
-    isOpen={isOpen}
-    onRequestClose={onRequestClose}
-    style={customStyles}
-    contentLabel="Image Modal"
-  >
-    <img src={imageUrlLarge} alt="Large" />
-  </Modal>
-);
+    return (
+        <Modal isOpen={isOpen} onRequestClose={onRequestClose} style={customStyles} contentLabel="Image Modal">
+            <img src={imageUrlLarge} alt="Large" />
+        </Modal>
+    );
 }
