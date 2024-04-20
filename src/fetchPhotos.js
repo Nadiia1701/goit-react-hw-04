@@ -8,7 +8,7 @@ export const fetchPhotos = async (searchQuery, currentPage) => {
             client_id: "ZpnJT1ilgJTrC4AdnVDJhj9_t-JrB6gRI132WdZAKCk",
             query: searchQuery,
             page: currentPage,
-            per_page: 15,
+            per_page: 8,
         }
     });
     return response.data.results;
