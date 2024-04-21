@@ -6,8 +6,8 @@ export default function ImageCard({ urls, description, onClick }) {
     };
 
     return (
-        <div onClick={handleClick}>
-            <img className={css.img} src={urls.small} alt={description} />
+        <div>
+            <img className={css.img} src={urls.small} alt={description} onClick={handleClick} />
         </div>
     );
 }
